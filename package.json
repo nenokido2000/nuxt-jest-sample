@@ -1,0 +1,63 @@
+{
+  "name": "nuxt-jest-sample",
+  "version": "1.0.0",
+  "description": "My classy Nuxt.js project",
+  "author": "Naoki Enokido",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.0.0",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.4.6",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@vue/test-utils": "^1.0.0-beta.28",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.0.0",
+    "babel-preset-vue-app": "^2.0.0",
+    "jest": "^24.0.0",
+    "lodash.clonedeep": "^4.5.0",
+    "nodemon": "^1.11.0",
+    "vue-jest": "^3.0.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/app/$1",
+      "^@@/(.*)$": "<rootDir>/$1",
+      "^~/(.*)$": "<rootDir>/app/$1",
+      "^~~/(.*)$": "<rootDir>/$1"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      ".*\\.(vue)$": "vue-jest"
+    },
+    "collectCoverageFrom": [
+      "app/**/*.{js,vue}"
+    ]
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@babel/preset-env"
+        ]
+      }
+    }
+  }
+}
